@@ -13,6 +13,7 @@ CREATE TABLE [dbo].[MyEmployees](
 	[FirstName] [nvarchar](30) NOT NULL,
 	[LastName] [nvarchar](40) NOT NULL,
 	[Title] [nvarchar](50) NOT NULL,
+	[GenderId] [int] NOT NULL FOREIGN KEY REFERENCES Gender(GenderId)
 	[DeptID] [smallint] NOT NULL,
 	[ManagerID] [int] NULL,
  CONSTRAINT [PK_EmployeeID] PRIMARY KEY CLUSTERED 
